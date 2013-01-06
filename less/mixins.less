@@ -1,0 +1,178 @@
+@baseFontSize: 1.7em;
+@fontLogo:@baseFontSize*3.5;
+@fontDesc:@baseFontSize*1.2;
+/*LESS Color variables*/
+@white: #F2F2E9;
+@lightBlue: #59C9F6;
+@bgBlue:#1B6E8F;
+
+@bgBlueLight: #1D789C;
+@bluePressed:#39AEDC;
+@sans-serif: 'Ruluko','Helvetica Neue',Arial,Ubuntu,sans-serif;
+
+@bones-pink:        #f01d4f;
+@bones-blue:        #1990db;
+@black:             #000;
+//@white:             #fff;
+
+
+.clearfix {
+  zoom: 1; }
+  .clearfix:before, .clearfix:after {
+    content: "";
+    display: table; }
+  .clearfix:after {
+    clear: both; }
+    
+    
+.rounded(@radius: 4px) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+/* .rounded-left(4px); */
+.rounded-left(@radius: 4px) {
+    -webkit-border-bottom-left-radius: @radius;
+  	 -webkit-border-top-left-radius: @radius;
+			-moz-border-radius-bottomleft: @radius;
+		   	 -moz-border-radius-topleft: @radius;
+					border-bottom-left-radius: @radius;
+			   		 border-top-left-radius: @radius;
+}
+
+/* .rounded-right(4px); */
+.rounded-right(@radius: 4px) {
+	-webkit-border-bottom-right-radius: @radius;
+  	 -webkit-border-top-right-radius: @radius;
+			-moz-border-radius-bottomright: @radius;
+		   	 -moz-border-radius-topright: @radius;
+					border-bottom-right-radius: @radius;
+			   		 border-top-right-radius: @radius;
+}
+
+/* .rounded-bottom(4px); */
+.rounded-bottom(@radius: 4px) {
+	-webkit-border-bottom-right-radius: @radius;
+	 -webkit-border-bottom-left-radius: @radius;
+	    -moz-border-radius-bottomright: @radius;
+	     -moz-border-radius-bottomleft: @radius;
+	        border-bottom-right-radius: @radius;
+	         border-bottom-left-radius: @radius;
+}
+
+/* .rounded-top(4px); */
+.rounded-top(@radius: 4px) {
+	-webkit-border-top-right-radius: @radius;
+	 -webkit-border-top-left-radius: @radius;
+	    -moz-border-radius-topright: @radius;
+	     -moz-border-radius-topleft: @radius;
+	        border-top-right-radius: @radius;
+	         border-top-left-radius: @radius;
+}
+
+/*********************
+TRANISTION
+*********************/
+
+/* .transition(all,2s); */
+.transition(@what: all, @time: 0.2s) {
+	-webkit-transition: @what @time ease-out;
+	   -moz-transition: @what @time ease-out;
+	     -o-transition: @what @time ease-out;
+	        transition: @what @time ease-out;
+}
+
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can 
+really slow down your CSS. Don't overdue it.
+*********************/
+
+/* .css-gradient(#dfdfdf,#f8f8f8); */
+.css-gradient(@from: #dfdfdf, @to: #f8f8f8) {
+	background-color: @to;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
+	background-image: -webkit-linear-gradient(top, @from, @to);
+	background-image: -moz-linear-gradient(top, @from, @to);
+	background-image: -o-linear-gradient(top, @from, @to);
+	background-image: linear-gradient(to bottom, @from, @to);
+}
+
+/*********************
+BOX SIZING
+*********************/
+
+/* .boxSizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So 
+probably best not to use it. I mean, were you going to anyway? */
+.boxSizing(@type: border-box) {
+	-webkit-box-sizing: @type;
+	   -moz-box-sizing: @type;
+			-ms-box-sizing: @type;
+					box-sizing: @type;
+}
+
+/*********************
+BOX SHADOW
+*********************/
+
+/* .boxShadow(0 0 4px #444); */
+.boxShadow(@x: 0, @y: 0, @radius: 4px, @spread: 0, @color: rgba(0,0,0,0.5)) {
+	-webkit-box-shadow: @x @y @radius @spread @color;
+	   -moz-box-shadow: @x @y @radius @spread @color;
+					box-shadow: @x @y @radius @spread @color; 
+}
+
+.button, .button:visited {
+    border: 1px solid darken(@bones-pink, 13%);
+	border-top-color: darken(@bones-pink, 7%);
+	border-left-color: darken(@bones-pink, 7%);
+	padding: 4px 12px;
+	color: @white;
+	display: inline-block;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 0 1px rgba(0,0,0, .75);
+	cursor: pointer;
+	margin-bottom: 20px;
+	line-height: 21px;
+	.transition();
+	.rounded(4px);
+	.css-gradient(@bones-pink,darken(@bones-pink, 5%));
+
+	&:hover, &:focus {
+		color: @white;
+	  	border: 1px solid darken(@bones-pink, 13%);
+	  	border-top-color: darken(@bones-pink, 20%);
+	 	border-left-color: darken(@bones-pink, 20%);
+		.css-gradient(darken(@bones-pink, 5%),darken(@bones-pink, 10%));
+	}
+	
+	&:active {
+		.css-gradient(darken(@bones-pink, 5%),@bones-pink);
+	}	
+}
+
+.blue-button, .blue-button:visited {
+	border-color: darken(@bones-blue, 10%);
+	text-shadow: 0 1px 1px darken(@bones-blue, 10%);
+	.css-gradient( @bones-blue, darken(@bones-blue, 5%) );
+	-webkit-box-shadow: inset 0 0 3px lighten(@bones-blue, 16%);
+       -moz-box-shadow: inset 0 0 3px lighten(@bones-blue, 16%);
+   	        box-shadow: inset 0 0 3px lighten(@bones-blue, 16%);
+	&:hover, &:focus {
+		border-color: darken(@bones-blue, 15%);
+		.css-gradient( darken(@bones-blue, 4%), darken(@bones-blue, 10%) );
+	}
+	&:active {
+		.css-gradient( darken(@bones-blue, 5%), @bones-blue );
+	}
+}
+
+
+.aligncenter{margin-left: auto; margin-right: auto; }
+.text-left,   { text-align: left; }
+.text-center, { text-align: center; }
+.text-right, { text-align: right; }
