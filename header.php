@@ -12,6 +12,10 @@
 		
 		<title><?php wp_title('@',true,'right'); bloginfo('title'); ?></title>
 		<meta name="description" content="Blog of Aravind Pedapudi">
+		<meta name="author" content="Aravind Pedapudi">
+		
+		<meta property="og:site_name" content="Aravind Pedapudi's blog"/>
+		
 		<meta name="keywords" content="programming, MATLAB, python, javascript, web designer, geek, pedapudi, arawind.renge, arawind.ren, arawind">
 		<!-- Google Chrome Frame for IE -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">

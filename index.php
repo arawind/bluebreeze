@@ -1,4 +1,5 @@
 <?php get_header(); 
+//echo 'this works!'
 ?>
 			
 			<div id="content">
