@@ -37,7 +37,6 @@ and will be used across all viewports.
 GENERAL STYLES
 *********************/
 body {
-  font-family: Georgia, serif;
   font-size: 14px;
   line-height: 1.5;
   color: #565656;
@@ -101,7 +100,7 @@ LINK STYLES
 *********************/
 a,
 a:visited {
-  color: #f01d4f;
+  color: #1990db;
   /* on hover */
 
   /* on click */
@@ -113,7 +112,7 @@ a:hover,
 a:visited:hover,
 a:focus,
 a:visited:focus {
-  color: #f34871;
+  color: #f2f2e9;
 }
 a:link,
 a:visited:link {
@@ -137,9 +136,7 @@ h4,
 .h4,
 h5,
 .h5 {
-  font-family: sans-serif;
   text-rendering: optimizelegibility;
-  font-weight: 500;
   /* 
 	if you're going to use webfonts, be sure to check your weights 
 	http://css-tricks.com/watch-your-font-weight/
@@ -285,13 +282,11 @@ POSTS & CONTENT STYLES
 }
 .post-content pre,
 .post-content code {
-  background: #eee;
   border: 1px solid #cecece;
   padding: 10px;
 }
 /* end .post-content */
 .wp-caption {
-  background: #eee;
   padding: 5px;
   /* images inside wp-caption */
 
@@ -343,12 +338,11 @@ PAGE NAVI STYLES
 }
 .bones_page_navi li a:hover,
 .bones_page_navi li a:focus {
-  color: #f01d4f;
   text-decoration: underline;
 }
 .bones_page_navi li.bpn-current {
   padding: 3px 6px;
-  border-bottom: 2px solid #f01d4f;
+  border-bottom: 2px solid;
   position: relative;
 }
 .bones_page_navi li.bpn-current a {
@@ -437,12 +431,6 @@ COMMENT STYLES
   margin-top: 0;
   padding-bottom: 0;
 }
-.commentlist .odd {
-  background: #eee;
-}
-.commentlist .even {
-  background: #fefefe;
-}
 .commentlist .vcard {
   margin-left: 50px;
 }
@@ -465,7 +453,6 @@ COMMENT STYLES
   left: 10px;
   padding: 2px;
   border: 1px solid #cecece;
-  background: #fff;
 }
 .commentlist .comment_content {
   margin-left: 50px;
@@ -478,7 +465,6 @@ COMMENT STYLES
 .commentlist .comment-reply-link {
   text-decoration: none;
   float: right;
-  background: #4598bb;
   padding: 3px 5px;
   color: #fff;
   opacity: 0.65;
@@ -906,7 +892,6 @@ you can add resource intensive styles.
     margin-top: 2.2em;
   }
   .widgettitle {
-    border-bottom: 2px solid #444;
     margin-bottom: 0.75em;
   }
   .widget {
@@ -1370,6 +1355,7 @@ nav .menu ul li a:hover {
 header.article-header .headerCateg {
   float: left;
   padding-left: 20px;
+  width: 80%;
 }
 header.article-header .headerCateg p.meta {
   margin-top: 10px;
