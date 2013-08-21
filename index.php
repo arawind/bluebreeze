@@ -14,7 +14,7 @@
 						
 						    <header class="article-header clearfix">
 							
-						      <div class="divMeta"><p class="meta"><?php //_e('Posted', 'bonestheme'); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php //the_time(get_option('date_format'));
+						      <div class="divMeta"><p class="meta updated"><?php //_e('Posted', 'bonestheme'); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php //the_time(get_option('date_format'));
 								//date_format = F j, Y F=April, j=12, Y=2012
 								echo '<span class="metaMonth">';
 								the_time('F');
@@ -26,9 +26,9 @@
 
                                 </div> 
                                 <div class="headerCateg">
-                                <h1 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+                                <h1 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
                                 
-                                 <p class="meta"><?php //_e('filed under', 'bonestheme'); ?> <span class="metaCategory"><?php the_category(', '); ?></span></p>
+                                 <p class="meta"><?php //_e('filed under', 'bonestheme'); ?> <span class="metaCategory categories"><?php the_category(', '); ?></span> </p>
                                  </div>
 							
 							    
@@ -41,8 +41,8 @@
 						
 						    <footer class="article-footer">
 
-    							<p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?></p>
-
+    							<p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?> </p>
+<small class="author" style="opacity:0"> <a href="http://gravatar.com/arawindren" rel="author">Aravind Pedapudi</a></small>
 						    </footer> <!-- end article footer -->
 						    
 						    <?php // comments_template(); // uncomment if you want to use them ?>

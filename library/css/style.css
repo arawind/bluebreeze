@@ -311,6 +311,7 @@ PAGE NAVI STYLES
   margin: 1.1em 0 2.2em;
 }
 .bones_page_navi {
+  list-style-type: none;
   /* current page link */
   /* end .bones_page_navi .bpn-current */
 

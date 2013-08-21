@@ -12,9 +12,9 @@
 						
 						    <header class="article-header">
 							
-							    <h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
+							    <h1 class="page-title entry-title" itemprop="headline"><?php the_title(); ?></h1>
 							
-							    <p class="meta"><?php _e("Posted", "bonestheme"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?>.</p>
+							    <p class="meta updated"><?php _e("Posted", "bonestheme"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?>.</p>
 						
 						    </header> <!-- end article header -->
 					
@@ -25,6 +25,7 @@
 						    <footer class="article-footer">
 			
 							    <?php the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ', ', '</p>'); ?>
+							    <small class="author" style="opacity:0"> <a href="http://gravatar.com/arawindren" rel="author">Aravind Pedapudi</a></small>
 							
 						    </footer> <!-- end article footer -->
 						    
